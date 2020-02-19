@@ -16,11 +16,6 @@ const Data = [
     entry: "eten 3 april",
     prijs: 25,
     datum: "03 04 2020"
-  },
-
-  {
-    userName: "Tim",
-    amount: 0
   }
 ];
 
