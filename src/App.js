@@ -8,6 +8,9 @@ import {
   useParams
 } from "react-router-dom";
 import Home from "./Home";
+import About from "./About";
+import Vrienden from "./Vrienden";
+import Familie from "./Familie";
 
 export default function App() {
   return (
@@ -41,14 +44,6 @@ export default function App() {
   );
 }
 
-// function Home() {
-//   return <h2>Home</h2>;
-// }
-
-function About() {
-  return <h2>About</h2>;
-}
-
 function Groepen() {
   let match = useRouteMatch();
 
@@ -58,16 +53,19 @@ function Groepen() {
 
       <ul>
         <li>
-          <Link to={`${match.url}/components`}>Components</Link>
+          <Link to={`${match.url}/vrienden`}>Vrienden</Link>
         </li>
         <li>
-          <Link to={`${match.url}/props-v-state`}>Props v. State</Link>
+          <Link to={`${match.url}/familie`}>Familie</Link>
         </li>
       </ul>
 
       <Switch>
-        <Route path={`${match.path}/:topicId`}>
-          <Groep />
+        <Route path={`${match.path}/vrienden`}>
+          <Vrienden />
+        </Route>
+        <Route path={`${match.path}/familie`}>
+          <Familie />
         </Route>
         <Route path={match.path}>
           <h3>Please select a group.</h3>
@@ -75,9 +73,4 @@ function Groepen() {
       </Switch>
     </div>
   );
-}
-
-function Groep() {
-  let { topicId } = useParams();
-  return <h3>Requested topic ID: {topicId}</h3>;
 }
