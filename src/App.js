@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
-import Vrienden from "./Vrienden";
+import Container from "./Container";
 import Familie from "./Familie";
 
 export default function App() {
@@ -53,7 +53,7 @@ function Groepen() {
 
       <ul>
         <li>
-          <Link to={`${match.url}/vrienden`}>Vrienden</Link>
+          <Link to={`${match.url}/container`}>Container</Link>
         </li>
         <li>
           <Link to={`${match.url}/familie`}>Familie</Link>
@@ -61,8 +61,8 @@ function Groepen() {
       </ul>
 
       <Switch>
-        <Route path={`${match.path}/vrienden`}>
-          <Vrienden />
+        <Route path={`${match.path}/container`}>
+          <Container />
         </Route>
         <Route path={`${match.path}/familie`}>
           <Familie />
