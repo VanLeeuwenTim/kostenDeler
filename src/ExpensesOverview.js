@@ -17,10 +17,22 @@ const ExpensesOverview = props => {
       <table style={{ width: "100%" }}>
         <thead>
           <tr className="table-header">
-            <th className="table-row__item">Paid by:</th>
-            <th className="table-row__item">Amount:</th>
+            <th className="table-row__item">
+              Paid by:
+              <button onClick={props.sort}>sort asc</button>
+              <button>sort dsc</button>
+            </th>
+            <th className="table-row__item">
+              Amount:
+              <button>sort asc</button>
+              <button>sort dsc</button>
+            </th>
             <th className="table-row__item">Currency:</th>
-            <th className="table-row__item">Date:</th>
+            <th className="table-row__item">
+              Date:
+              <button>sort asc</button>
+              <button>sort dsc</button>
+            </th>
             <th className="table-row__item">Description:</th>
           </tr>
         </thead>

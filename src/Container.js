@@ -10,6 +10,11 @@ class Container extends Component {
     this.state = {
       data: Data
     };
+    this.sort = this.sort.bind(this);
+  }
+
+  sort() {
+    console.log("sortbutton clicked");
   }
 
   render() {
@@ -17,7 +22,7 @@ class Container extends Component {
       <div>
         <BalanceOverview data={this.state.data} />
         <Input />
-        <ExpensesOverview data={this.state.data} />
+        <ExpensesOverview data={this.state.data} sort={this.sort} />
       </div>
     );
   }
