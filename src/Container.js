@@ -12,15 +12,17 @@ class Container extends Component {
 		};
 	}
 
-	render() {
-		return (
-			<div>
-				<BalanceOverview data={this.state.data} />
-				<Input />
-				<ExpensesOverview data={this.state.data} />
-			</div>
-		);
-	}
+
+  render() {
+    return (
+      <div>
+        <BalanceOverview data={this.state.data} />
+        <Input />
+        <ExpensesOverview data={this.state.data} />
+      </div>
+    );
+  }
+
 }
 
 export default Container;
