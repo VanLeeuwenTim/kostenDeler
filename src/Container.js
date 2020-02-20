@@ -1,16 +1,17 @@
-import React, { Component } from "react";
-import Data from "./Data";
-import BalanceOverview from "./BalanceOverview";
-import ExpensesOverview from "./ExpensesOverview";
-import Input from "./Input";
+import React, { Component } from 'react';
+import Data from './Data';
+import BalanceOverview from './BalanceOverview';
+import ExpensesOverview from './ExpensesOverview';
+import Input from './Input';
 
 class Container extends Component {
-  constructor() {
-    super();
-    this.state = {
-      data: Data
-    };
-  }
+	constructor() {
+		super();
+		this.state = {
+			data: Data
+		};
+	}
+
 
   render() {
     return (
@@ -21,6 +22,7 @@ class Container extends Component {
       </div>
     );
   }
+
 }
 
 export default Container;
