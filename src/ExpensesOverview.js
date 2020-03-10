@@ -8,6 +8,7 @@ const ExpensesOverview = props => {
       <td>{item.currency}</td>
       <td>{item.date}</td>
       <td>{item.description}</td>
+      <td>{item.paidBy}</td>
     </tr>
   ));
 
@@ -34,6 +35,7 @@ const ExpensesOverview = props => {
               <button>sort dsc</button>
             </th>
             <th className="table-row__item">Description:</th>
+            <th className="table-row__item">Added By:</th>
           </tr>
         </thead>
         <tbody>{expenseItems}</tbody>
