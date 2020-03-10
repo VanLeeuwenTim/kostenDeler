@@ -9,6 +9,9 @@ const ExpensesOverview = props => {
       <td>{item.date}</td>
       <td>{item.description}</td>
       <td>{item.paidBy}</td>
+      <td>
+        <button>delete item</button>
+      </td>
     </tr>
   ));
 
