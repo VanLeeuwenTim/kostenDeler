@@ -9,6 +9,11 @@ const ExpensesOverview = props => {
       <td>{item.date}</td>
       <td>{item.description}</td>
       <td>{item.paidBy}</td>
+      <td>
+        <button onClick={props.deleteItem} id={item.id}>
+          delete item
+        </button>
+      </td>
     </tr>
   ));
 
