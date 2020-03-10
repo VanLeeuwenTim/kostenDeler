@@ -14,7 +14,8 @@ const Data = [
     amount: 50,
     description: "etentje",
     currency: "EUR",
-    date: "12-06-2020"
+    date: "12-06-2020",
+    paidBy: "Tim"
   },
 
   {
