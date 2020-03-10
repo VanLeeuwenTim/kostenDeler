@@ -10,7 +10,12 @@ const BalanceOverview = props => {
     return <li>{element}</li>;
   });
 
-  return <ul>{listNames}</ul>;
+  return (
+    <div>
+      <h2>BalanceOverview:</h2>
+      <ul>{listNames}</ul>
+    </div>
+  );
 };
 
 export default BalanceOverview;
