@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Data from "./data";
+import Data from "./Database";
 import BalanceOverview from "./BalanceOverview";
 import ExpensesOverview from "./ExpensesOverview";
 import Input from "./Input";
