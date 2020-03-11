@@ -11,9 +11,9 @@ const Input = props => {
 				<option value="USD">USD</option>
 				<option value="GBP">GBP</option>
 			</select>
-			<input name="date" type="text" placeholder="date" />
-			<input name="discription" type="text" placeholder="--Event--" />
-			<input name="addedBy" type="text" placeholder="--Paid by--" />
+			<input name="date" type="text" placeholder="--date--" />
+			<input name="description" type="text" placeholder="--Event--" />
+			<input name="addedBy" type="text" placeholder="--Added by--" />
 			<input type="submit" value="Submit" onClick={props.makeId} />
 		</form>
 	);
