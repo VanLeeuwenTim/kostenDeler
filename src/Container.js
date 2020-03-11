@@ -49,10 +49,11 @@ class Container extends Component {
 
 	deleteItem(event) {
 		const deleteItemId = event.target.id;
+		console.log(event.target);
 		this.setState(prevState => {
 			const updatedItemList = prevState.data;
 			updatedItemList.splice(
-				updatedItemList.findIndex(item => item.id == deleteItemId),
+				updatedItemList.findIndex(item => item.key == deleteItemId),
 				1
 			);
 			return {
