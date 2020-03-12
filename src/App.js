@@ -11,6 +11,7 @@ import Home from "./Home";
 import About from "./About";
 import Container from "./Container";
 import Familie from "./Familie";
+import "./App.css";
 
 export default function App() {
   return (
