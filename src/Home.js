@@ -5,7 +5,10 @@ class Home extends Component {
   constructor() {
     super();
     this.state = {
-      users: []
+      users: [
+        { userName: "Tim", password: "test" },
+        { userName: "Daan", password: "hallo" }
+      ]
     };
 
     this.onSubmit = this.onSubmit.bind(this);

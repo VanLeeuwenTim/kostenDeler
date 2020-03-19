@@ -1,10 +1,33 @@
-body {
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+/* body {
   margin: 0;
   font-family: "Kanit", sans-serif;
 }
-/* * {
+* {
   border: 1px dotted green;
-} */
+}
 
 h2 {
   padding-left: 20px;
@@ -45,7 +68,7 @@ li a {
   text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
+
 li a:hover {
   background-color: rgb(107, 106, 106);
 }
@@ -70,4 +93,4 @@ li a:hover {
 #expenses-overview {
   width: 100%;
   display: inline-block;
-}
+} */
