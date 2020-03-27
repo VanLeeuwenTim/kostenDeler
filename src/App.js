@@ -1,58 +1,95 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useRouteMatch,
-  useParams
-} from "react-router-dom";
-import Home from "./Home";
-import About from "./About";
-import Container from "./Container";
-import Familie from "./Familie";
-import "./App.css";
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import { Route, Switch } from "react-router-dom";
+import { connect } from "react-redux";
+import ProtectedRoute from "./components/ProtectedRoute";
+import Home from "./components/Home";
 import Login from "./components/Login";
-import SignUp from "./components/Signup";
 
-export default function App() {
+function App(props) {
+  const { isAuthenticated, isVerifying } = props;
   return (
-    <Router>
-      <div className="App">
-        <nav className="navbar navbar-expand-lg navbar-light fixed-top">
-          <div className="container">
-            <Link className="navbar-brand" to={"/sign-in"}>
-              expensesOverview Daan and Tim
-            </Link>
-            <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
-              <ul className="navbar-nav ml-auto">
-                <li className="nav-item">
-                  <Link className="nav-link" to={"/sign-in"}>
-                    Login
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to={"/sign-up"}>
-                    Sign up
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
+    <Switch>
+      <ProtectedRoute
+        exact
+        path="/"
+        component={Home}
+        isAuthenticated={isAuthenticated}
+        isVerifying={isVerifying}
+      />
+      <Route path="/login" component={Login} />
+    </Switch>
+  );
+}
 
-        <div className="auth-wrapper">
-          <div className="auth-inner">
-            <Switch>
-              <Route exact path="/" component={Login} />
-              <Route path="/sign-in" component={Login} />
-              <Route path="/sign-up" component={SignUp} />
-            </Switch>
-          </div>
-        </div>
-      </div>
-    </Router>
+function mapStateToProps(state) {
+  return {
+    isAuthenticated: state.auth.isAuthenticated,
+    isVerifying: state.auth.isVerifying
+  };
+}
+export default connect(mapStateToProps)(App);
+
+
+
+// import React from "react";
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route,
+//   Link,
+//   useRouteMatch,
+//   useParams
+// } from "react-router-dom";
+// import Home from "./Home";
+// import About from "./About";
+// import Container from "./Container";
+// import Familie from "./Familie";
+// import "./App.css";
+// import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+// import Login from "./components/LoginOld";
+// import SignUp from "./components/Signup";
+
+
+
+
+
+// export default function App() {
+//   return (
+//     <Router>
+//       <div className="App">
+//         <nav className="navbar navbar-expand-lg navbar-light fixed-top">
+//           <div className="container">
+//             <Link className="navbar-brand" to={"/sign-in"}>
+//               expensesOverview Daan and Tim
+//             </Link>
+//             <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
+//               <ul className="navbar-nav ml-auto">
+//                 <li className="nav-item">
+//                   <Link className="nav-link" to={"/sign-in"}>
+//                     Login
+//                   </Link>
+//                 </li>
+//                 <li className="nav-item">
+//                   <Link className="nav-link" to={"/sign-up"}>
+//                     Sign up
+//                   </Link>
+//                 </li>
+//               </ul>
+//             </div>
+//           </div>
+//         </nav>
+
+//         <div className="auth-wrapper">
+//           <div className="auth-inner">
+//             <Switch>
+//               <Route exact path="/" component={Login} />
+//               <Route path="/sign-in" component={Login} />
+//               <Route path="/sign-up" component={SignUp} />
+//             </Switch>
+//           </div>
+//         </div>
+//       </div>
+//     </Router>
 
     // <Router>
     //   <div>
