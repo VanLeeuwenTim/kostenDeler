@@ -36,6 +36,7 @@ class Login extends Component {
               type="email"
               className="form-control"
               placeholder="Enter email"
+              onChange={this.handleEmailChange}
             />
           </div>
 
@@ -45,6 +46,7 @@ class Login extends Component {
               type="password"
               className="form-control"
               placeholder="Enter password"
+              onChange={this.handlePasswordChange}
             />
           </div>
 
@@ -60,8 +62,12 @@ class Login extends Component {
               </label>
             </div>
           </div>
-
-          <button type="submit" className="btn btn-primary btn-block">
+          {loginError && alert("loginError")}
+          <button
+            type="submit"
+            className="btn btn-primary btn-block"
+            onClick={this.handleSubmit}
+          >
             Submit
           </button>
           <p className="forgot-password text-right">

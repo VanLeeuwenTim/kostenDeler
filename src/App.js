@@ -29,8 +29,6 @@ function mapStateToProps(state) {
 }
 export default connect(mapStateToProps)(App);
 
-
-
 // import React from "react";
 // import {
 //   BrowserRouter as Router,
@@ -48,10 +46,6 @@ export default connect(mapStateToProps)(App);
 // import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 // import Login from "./components/LoginOld";
 // import SignUp from "./components/Signup";
-
-
-
-
 
 // export default function App() {
 //   return (
@@ -91,35 +85,35 @@ export default connect(mapStateToProps)(App);
 //       </div>
 //     </Router>
 
-    // <Router>
-    //   <div>
-    //     <ul>
-    //       <li>
-    //         <Link to="/">Home</Link>
-    //       </li>
-    //       <li>
-    //         <Link to="/about">About</Link>
-    //       </li>
-    //       <li>
-    //         <Link to="/groepen">Groepen</Link>
-    //       </li>
-    //     </ul>
+// <Router>
+//   <div>
+//     <ul>
+//       <li>
+//         <Link to="/">Home</Link>
+//       </li>
+//       <li>
+//         <Link to="/about">About</Link>
+//       </li>
+//       <li>
+//         <Link to="/groepen">Groepen</Link>
+//       </li>
+//     </ul>
 
-    //     <Switch>
-    //       <Route path="/about">
-    //         <About />
-    //       </Route>
-    //       <Route path="/groepen">
-    //         <Groepen />
-    //       </Route>
-    //       <Route path="/">
-    //         <Home />
-    //       </Route>
-    //     </Switch>
-    //   </div>
-    // </Router>
-  );
-}
+//     <Switch>
+//       <Route path="/about">
+//         <About />
+//       </Route>
+//       <Route path="/groepen">
+//         <Groepen />
+//       </Route>
+//       <Route path="/">
+//         <Home />
+//       </Route>
+//     </Switch>
+//   </div>
+// </Router>
+//   );
+// }
 
 // function Groepen() {
 //   let match = useRouteMatch();
