@@ -7,6 +7,7 @@ import Login from "./components/Login";
 
 function App(props) {
   const { isAuthenticated, isVerifying } = props;
+  console.log(props);
   return (
     <Switch>
       <ProtectedRoute

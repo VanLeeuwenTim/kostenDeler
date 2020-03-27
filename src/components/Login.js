@@ -68,7 +68,7 @@ class Login extends Component {
             className="btn btn-primary btn-block"
             onClick={this.handleSubmit}
           >
-            Submit
+            Sign In
           </button>
           <p className="forgot-password text-right">
             Forgot <a href="#">password?</a>

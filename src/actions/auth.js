@@ -92,6 +92,7 @@ export const verifyAuth = () => dispatch => {
   dispatch(verifyRequest());
   myFirebase.auth().onAuthStateChanged(user => {
     if (user !== null) {
+      console.log("testFirebaseInRedux: logged in");
       dispatch(receiveLogin(user));
     }
     dispatch(verifySuccess());
